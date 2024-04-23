@@ -11,8 +11,8 @@ public class FlowerSeekBehavior : MonoBehaviour
 
     private Boid boid;
     private Flower targetFlower;
-    private bool isSitting = false;
-    private bool isCooldown = false;
+    public bool isSitting = false;
+    public bool isCooldown = false;
 
     void Start()
     {
@@ -72,7 +72,7 @@ public class FlowerSeekBehavior : MonoBehaviour
         }
     }
 
-    IEnumerator SitOnFlowerTimer()
+   public IEnumerator SitOnFlowerTimer()
     {
         yield return new WaitForSeconds(sitDuration);
 

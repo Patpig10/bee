@@ -600,6 +600,8 @@ MonoBehaviour:
   sitDistance: 0.5
   sitDuration: 3
   seekCooldownDuration: 20
+  isSitting: 0
+  isCooldown: 0
 --- !u!114 &350427519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1159,6 +1161,8 @@ MonoBehaviour:
   sitDistance: 0.5
   sitDuration: 3
   seekCooldownDuration: 20
+  isSitting: 0
+  isCooldown: 0
 --- !u!114 &1175591060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1587,6 +1591,7 @@ GameObject:
   - component: {fileID: 1501317195}
   - component: {fileID: 1501317200}
   - component: {fileID: 1501317198}
+  - component: {fileID: 1501317203}
   - component: {fileID: 1501317199}
   - component: {fileID: 1501317201}
   - component: {fileID: 1501317202}
@@ -1711,6 +1716,8 @@ MonoBehaviour:
   sitDistance: 0.5
   sitDuration: 3
   seekCooldownDuration: 20
+  isSitting: 0
+  isCooldown: 0
 --- !u!65 &1501317202
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1732,6 +1739,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1501317203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501317194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ca51b56ad1e43a45a7213f0c68921f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
+  flowerSeekBehavior: {fileID: 1501317201}
+  wanderBehavior: {fileID: 1501317200}
+  switchInterval: 13
+  targetFlowerTag: flower
 --- !u!43 &1593948967
 Mesh:
   m_ObjectHideFlags: 0
@@ -1960,6 +1984,8 @@ MonoBehaviour:
   sitDistance: 0.5
   sitDuration: 3
   seekCooldownDuration: 20
+  isSitting: 0
+  isCooldown: 0
 --- !u!114 &1650501336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2297,6 +2323,8 @@ MonoBehaviour:
   sitDistance: 0.5
   sitDuration: 3
   seekCooldownDuration: 20
+  isSitting: 0
+  isCooldown: 0
 --- !u!114 &1930454542
 MonoBehaviour:
   m_ObjectHideFlags: 0

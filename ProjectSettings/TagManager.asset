@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - wanderbee
+  - Petal
+  - flower
   layers:
   - Default
   - TransparentFX

@@ -12,6 +12,13 @@ public class Boid : MonoBehaviour
     public Vector3 velocity;
     public Vector3 acceleration;
 
+    private DisperseBehavior disperseBehavior;
+
+    void Start()
+    {
+        disperseBehavior = GetComponent<DisperseBehavior>();
+    }
+
     void Update()
     {
         Vector3 steeringForce = CalculateSteeringForce();
@@ -23,7 +30,9 @@ public class Boid : MonoBehaviour
     {
         Vector3 totalForce = Vector3.zero;
 
-        // Calculate other behaviors and accumulate forces here
+        // Add dispersal force
+        Vector3 dispersalForce = disperseBehavior.CalculateDispersalForce();
+        totalForce += dispersalForce;
 
         return totalForce;
     }
@@ -38,8 +47,13 @@ public class Boid : MonoBehaviour
     {
         velocity += acceleration * Time.deltaTime;
         velocity = Vector3.ClampMagnitude(velocity, maxSpeed);
-        transform.position += velocity * Time.deltaTime;
 
+        // Update position
+        Vector3 newPosition = transform.position + velocity * Time.deltaTime;
+        newPosition.y = Mathf.Max(newPosition.y, 0.0f); // Clamp y-axis to avoid going below zero
+        transform.position = newPosition;
+
+        // Update rotation
         if (velocity.magnitude > 0.01f)
         {
             transform.rotation = Quaternion.LookRotation(velocity.normalized);

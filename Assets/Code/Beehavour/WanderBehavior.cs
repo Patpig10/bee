@@ -1,3 +1,4 @@
+using Palmmedia.ReportGenerator.Core;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -44,5 +45,15 @@ public class WanderBehavior : MonoBehaviour
         randomDirection += initialPosition;
         randomDirection.y = Mathf.Clamp(randomDirection.y, minWanderHeight, maxWanderHeight); // Clamp height within range
         return randomDirection;
+
+
+
+
+
     }
+
+ 
+
+        
+
 }
