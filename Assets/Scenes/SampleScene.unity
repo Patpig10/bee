@@ -308,6 +308,7 @@ GameObject:
   - component: {fileID: 197935708}
   - component: {fileID: 197935712}
   - component: {fileID: 197935711}
+  - component: {fileID: 197935713}
   m_Layer: 0
   m_Name: Bee (3)
   m_TagString: wanderbee
@@ -398,6 +399,20 @@ MonoBehaviour:
   damping: 0.01
   velocity: {x: 0, y: 0, z: 0}
   acceleration: {x: 0, y: 0, z: 0}
+--- !u!114 &197935713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197935707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acdb494b506f2d8488f07d0d636da40b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dispersalRadius: 5
+  separationDistance: 2
 --- !u!1 &333493595
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,6 +568,7 @@ GameObject:
   - component: {fileID: 350427519}
   - component: {fileID: 350427518}
   - component: {fileID: 350427517}
+  - component: {fileID: 350427525}
   m_Layer: 0
   m_Name: follow
   m_TagString: wanderbee
@@ -697,6 +713,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &350427525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350427516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acdb494b506f2d8488f07d0d636da40b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dispersalRadius: 5
+  separationDistance: 2
 --- !u!1 &401142971
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,6 +852,7 @@ GameObject:
   - component: {fileID: 697355988}
   - component: {fileID: 697355992}
   - component: {fileID: 697355991}
+  - component: {fileID: 697355993}
   m_Layer: 0
   m_Name: Bee (4)
   m_TagString: wanderbee
@@ -912,6 +943,20 @@ MonoBehaviour:
   damping: 0.01
   velocity: {x: 0, y: 0, z: 0}
   acceleration: {x: 0, y: 0, z: 0}
+--- !u!114 &697355993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697355987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acdb494b506f2d8488f07d0d636da40b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dispersalRadius: 5
+  separationDistance: 2
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1114,6 +1159,7 @@ GameObject:
   - component: {fileID: 1175591060}
   - component: {fileID: 1175591059}
   - component: {fileID: 1175591058}
+  - component: {fileID: 1175591066}
   m_Layer: 0
   m_Name: follow
   m_TagString: wanderbee
@@ -1258,6 +1304,138 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1175591066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175591057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acdb494b506f2d8488f07d0d636da40b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dispersalRadius: 5
+  separationDistance: 2
+--- !u!1 &1294623760
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1294623762}
+  - component: {fileID: 1294623765}
+  - component: {fileID: 1294623761}
+  - component: {fileID: 1294623763}
+  - component: {fileID: 1294623766}
+  m_Layer: 0
+  m_Name: snake
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1294623761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294623760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4745d8fba01b5434a9db7feea2155dd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentSegmentsTo: {fileID: 1294623762}
+  makeRotator: 1
+  partOffset: 0
+  theta: 1.36
+  frequency: 0.35
+  numParts: 20
+  gap: 0.7
+  color: {r: 0, g: 0, b: 1, a: 1}
+  assignColors: 0
+  verticalSize: 1
+  flatten: 0
+  headPrefab: {fileID: 900541158343575650, guid: 186bc2b1c3cb5434caf2eed40f2bd81f, type: 3}
+  bodyPrefab: {fileID: 5609561785683356487, guid: 3dc1a5a1b88b20c4f829160d7115a48f, type: 3}
+  tailPrefab: {fileID: 8954762206496605127, guid: f29ef97df62c1794b908ab47a05523eb, type: 3}
+  seatPrefab: {fileID: 0}
+  lengthVariation: 0
+  seatPosition: 5
+--- !u!4 &1294623762
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294623760}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -57.050846, y: 0, z: 2.1695433}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1294623763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294623760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91696ad6beb03974c860c55b0f4f00c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bones: []
+  bondDamping: 25
+  angularBondDamping: 25
+--- !u!114 &1294623765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294623760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8e6802bbfccd54cb18570cf1e18720, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mass: 1
+  maxSpeed: 5
+  maxForce: 10
+  damping: 0.01
+  velocity: {x: 0, y: 0, z: 0}
+  acceleration: {x: 0, y: 0, z: 0}
+  noiseFrequency: 0.3
+  noiseAmplitude: 80
+  noiseRadius: 10
+  noiseDistance: 5
+  useHorizontalNoise: 1
+--- !u!114 &1294623766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294623760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b31185f748ea64408abc7385528e26f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  noiseFrequency: 0.3
+  noiseAmplitude: 80
+  noiseRadius: 10
+  useHorizontalNoise: 1
 --- !u!1 &1405637951
 GameObject:
   m_ObjectHideFlags: 0
@@ -1323,6 +1501,7 @@ GameObject:
   - component: {fileID: 1428966325}
   - component: {fileID: 1428966329}
   - component: {fileID: 1428966328}
+  - component: {fileID: 1428966330}
   m_Layer: 0
   m_Name: Bee (6)
   m_TagString: wanderbee
@@ -1413,6 +1592,20 @@ MonoBehaviour:
   damping: 0.01
   velocity: {x: 0, y: 0, z: 0}
   acceleration: {x: 0, y: 0, z: 0}
+--- !u!114 &1428966330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428966324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acdb494b506f2d8488f07d0d636da40b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dispersalRadius: 5
+  separationDistance: 2
 --- !u!43 &1444890244
 Mesh:
   m_ObjectHideFlags: 0
@@ -1595,6 +1788,7 @@ GameObject:
   - component: {fileID: 1501317199}
   - component: {fileID: 1501317201}
   - component: {fileID: 1501317202}
+  - component: {fileID: 1501317204}
   m_Layer: 0
   m_Name: Bee
   m_TagString: wanderbee
@@ -1756,6 +1950,20 @@ MonoBehaviour:
   wanderBehavior: {fileID: 1501317200}
   switchInterval: 13
   targetFlowerTag: flower
+--- !u!114 &1501317204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501317194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acdb494b506f2d8488f07d0d636da40b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dispersalRadius: 5
+  separationDistance: 2
 --- !u!43 &1593948967
 Mesh:
   m_ObjectHideFlags: 0
@@ -1937,6 +2145,7 @@ GameObject:
   - component: {fileID: 1650501336}
   - component: {fileID: 1650501335}
   - component: {fileID: 1650501334}
+  - component: {fileID: 1650501342}
   m_Layer: 0
   m_Name: follow
   m_TagString: wanderbee
@@ -2081,6 +2290,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1650501342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650501333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acdb494b506f2d8488f07d0d636da40b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dispersalRadius: 5
+  separationDistance: 2
 --- !u!1 &1752515312
 GameObject:
   m_ObjectHideFlags: 0
@@ -2276,6 +2499,7 @@ GameObject:
   - component: {fileID: 1930454542}
   - component: {fileID: 1930454541}
   - component: {fileID: 1930454540}
+  - component: {fileID: 1930454548}
   m_Layer: 0
   m_Name: leaderbee
   m_TagString: wanderbee
@@ -2420,6 +2644,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1405637953}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1930454548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930454539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acdb494b506f2d8488f07d0d636da40b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dispersalRadius: 5
+  separationDistance: 2
 --- !u!1 &2139631534
 GameObject:
   m_ObjectHideFlags: 0
@@ -2433,6 +2671,7 @@ GameObject:
   - component: {fileID: 2139631535}
   - component: {fileID: 2139631539}
   - component: {fileID: 2139631538}
+  - component: {fileID: 2139631540}
   m_Layer: 0
   m_Name: Bee (5)
   m_TagString: wanderbee
@@ -2523,6 +2762,20 @@ MonoBehaviour:
   damping: 0.01
   velocity: {x: 0, y: 0, z: 0}
   acceleration: {x: 0, y: 0, z: 0}
+--- !u!114 &2139631540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139631534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acdb494b506f2d8488f07d0d636da40b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dispersalRadius: 5
+  separationDistance: 2
 --- !u!1001 &5266516467474837620
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2620,3 +2873,4 @@ SceneRoots:
   - {fileID: 107279153}
   - {fileID: 1752515317}
   - {fileID: 401142972}
+  - {fileID: 1294623762}
