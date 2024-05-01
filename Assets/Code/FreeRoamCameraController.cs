@@ -12,8 +12,7 @@ public class FreeRoamCameraController : MonoBehaviour
 
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+      
     }
 
     void Update()
@@ -44,7 +43,7 @@ public class FreeRoamCameraController : MonoBehaviour
         transform.Rotate(Vector3.right, -mouseY);
 
         // Check for creature selection
-        if (Input.GetMouseButtonDown(0)) // Left mouse button click
+       /* if (Input.GetMouseButtonDown(0)) // Left mouse button click
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -58,25 +57,26 @@ public class FreeRoamCameraController : MonoBehaviour
                     StartFollowing(creature.gameObject);
                 }
             }
-        }
+        }*/
 
-        // Stop following if Escape key is pressed
+       /* // Stop following if Escape key is pressed
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             StopFollowing();
-        }
+        }*/
     }
 
-    void StartFollowing(GameObject target)
+   /* void StartFollowing(GameObject target)
     {
         followTarget = target;
         isFollowingTarget = true;
     }
-
+   */
+   /*
     void StopFollowing()
     {
         followTarget = null;
         isFollowingTarget = false;
-    }
+    }*/
 
 }

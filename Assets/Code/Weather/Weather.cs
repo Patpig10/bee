@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public abstract class Weather
 {
     protected SkyboxManager skyboxManager;
@@ -18,12 +20,12 @@ public class Rainy : Weather
     public override void Start()
     {
         skyboxManager.ChangeSkybox("rain");
-        // Start raining effects, instantiate rain particles, etc.
+        // Additional sunny weather effects
     }
 
     public override void Stop()
     {
-        // Stop raining effects
+        // Clean up sunny weather effects
     }
 }
 
