@@ -1,55 +1,89 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 public class RaindropSpawner : MonoBehaviour
 {
-  
-    public GameObject raindropPrefab;   // Prefab for raindrops
-    public float raindropSpeedMin = 5f;  // Minimum speed of raindrops
-    public float raindropSpeedMax = 10f; // Maximum speed of raindrops
+    public Vector3 spawnCenter = Vector3.zero; // Center of the spawn area
+    public Vector3 spawnSize = new Vector3(10f, 10f, 10f); // Size of the spawn area (width, height, depth)
+    public float minFallSpeed = 3f; // Minimum falling speed of cubes
+    public float maxFallSpeed = 8f; // Maximum falling speed of cubes
+    public float cubeLifetime = 10f; // Lifetime of cubes before they disappear
+    public float minScaleFactor = 0.8f; // Minimum scale factor for cubes
+    public float maxScaleFactor = 1.2f; // Maximum scale factor for cubes
+    public Material rainMaterial; // Material to apply to the cubes
+    public float spawnInterval = 0.5f; // Interval between cube spawns
 
     private bool isSpawning = false;
 
     public void StartSpawning()
     {
-        if (!isSpawning && raindropPrefab != null)
+        if (!isSpawning)
         {
             isSpawning = true;
-            InvokeRepeating("SpawnRaindrop", 0f, 0.1f); // Invoke SpawnRaindrop method continuously with interval
+            InvokeRepeating("SpawnCube", 0f, spawnInterval); // Invoke SpawnCube method continuously with interval
         }
     }
 
     public void StopSpawning()
     {
         isSpawning = false;
-        CancelInvoke("SpawnRaindrop");
+        CancelInvoke("SpawnCube");
     }
 
-    private void SpawnRaindrop()
+    private void SpawnCube()
     {
-        if (raindropPrefab == null)
-            return;
-
-        // Calculate random position within camera view for raindrop spawn
-        float camHeight = Camera.main.orthographicSize;
-        float camWidth = camHeight * Camera.main.aspect;
-
-        Vector3 spawnPosition = new Vector3(
-            Random.Range(-camWidth, camWidth),
-            camHeight,
-            0f
+        // Calculate random position within spawn area for cube spawn
+        Vector3 spawnPosition = spawnCenter + new Vector3(
+            Random.Range(-spawnSize.x / 2f, spawnSize.x / 2f),
+            spawnSize.y, // Spawn cubes from the top of the spawn area
+            Random.Range(-spawnSize.z / 2f, spawnSize.z / 2f)
         );
 
-        // Instantiate raindrop prefab at the calculated position
-        GameObject raindrop = Instantiate(raindropPrefab, spawnPosition, Quaternion.identity);
+        // Instantiate a cube at the calculated position
+        GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        cube.transform.position = spawnPosition;
 
-        // Set random speed for raindrop
-        Rigidbody rb = raindrop.GetComponent<Rigidbody>();
-        if (rb != null)
+        // Randomize cube scale
+        float scaleFactor = Random.Range(minScaleFactor, maxScaleFactor);
+        cube.transform.localScale *= scaleFactor;
+
+        // Apply rain material to the cube
+        Renderer cubeRenderer = cube.GetComponent<Renderer>();
+        if (cubeRenderer != null && rainMaterial != null)
         {
-            float raindropSpeed = Random.Range(raindropSpeedMin, raindropSpeedMax);
-            rb.velocity = Vector3.down * raindropSpeed;
+            cubeRenderer.material = rainMaterial;
+        }
+
+        // Set random falling speed for the cube
+        Rigidbody rb = cube.AddComponent<Rigidbody>();
+        rb.velocity = Vector3.down * Random.Range(minFallSpeed, maxFallSpeed);
+
+        // Destroy the cube after the specified lifetime
+        Destroy(cube, cubeLifetime);
+    }
+
+    private void OnDrawGizmos()
+    {
+        // Draw spawn area wireframe gizmo in editor
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireCube(spawnCenter, spawnSize);
+    }
+
+    // Method to adjust the spawn area size
+    public void AdjustSpawnSize(Vector3 newSize)
+    {
+        spawnSize = newSize;
+    }
+
+    // Method to adjust the spawn interval
+    public void AdjustSpawnInterval(float newInterval)
+    {
+        spawnInterval = newInterval;
+        if (isSpawning)
+        {
+            StopSpawning();
+            StartSpawning();
         }
     }
 }
-

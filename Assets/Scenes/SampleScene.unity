@@ -41264,7 +41264,7 @@ GameObject:
   - component: {fileID: 1354445619}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54424,6 +54424,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1867105663}
+        m_TargetAssemblyTypeName: RaindropSpawner, Assembly-CSharp
+        m_MethodName: StartSpawning
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1773015885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56823,6 +56835,59 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1867105662
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1867105664}
+  - component: {fileID: 1867105663}
+  m_Layer: 0
+  m_Name: test
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1867105663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867105662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe9f1a0b5c7c83b4bad58bb785dcce66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnCenter: {x: 0, y: 133.3, z: 0}
+  spawnSize: {x: 153.73, y: 23.01, z: 260.73}
+  minFallSpeed: 3
+  maxFallSpeed: 8
+  cubeLifetime: 4.54
+  minScaleFactor: 0.8
+  maxScaleFactor: 1.2
+  rainMaterial: {fileID: 2100000, guid: d507f64226671f14cb5e634f45d14a3e, type: 2}
+  spawnInterval: 0.0001
+--- !u!4 &1867105664
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867105662}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.007663, y: 96.2, z: -108.62697}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1867279058
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64845,3 +64910,4 @@ SceneRoots:
   - {fileID: 920486557}
   - {fileID: 1106044515}
   - {fileID: 1354445622}
+  - {fileID: 1867105664}
