@@ -5,7 +5,7 @@ using UnityEngine;
 public class WingFlapAnimator : MonoBehaviour
 {
     private float initialRotation;
-    private float flapSpeed;
+    public float flapSpeed;
     private float flapAmplitude;
     private float phaseOffset;
 

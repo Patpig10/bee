@@ -7,6 +7,9 @@ TagManager:
   - wanderbee
   - Petal
   - flower
+  - tree
+  - rain
+  - BeeBody
   layers:
   - Default
   - TransparentFX

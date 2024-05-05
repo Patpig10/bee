@@ -12,7 +12,9 @@ public class FreeRoamCameraController : MonoBehaviour
 
     private void Start()
     {
-      
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
     }
 
     void Update()

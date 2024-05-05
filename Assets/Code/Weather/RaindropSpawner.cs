@@ -55,6 +55,9 @@ public class RaindropSpawner : MonoBehaviour
             cubeRenderer.material = rainMaterial;
         }
 
+        // Set the "rain" tag to the cube
+        cube.tag = "rain";
+
         // Set random falling speed for the cube
         Rigidbody rb = cube.AddComponent<Rigidbody>();
         rb.velocity = Vector3.down * Random.Range(minFallSpeed, maxFallSpeed);

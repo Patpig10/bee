@@ -11,13 +11,13 @@ public class WanderBehavior : MonoBehaviour
     public float maxWanderHeight = 5.0f; // Maximum height above initial position
     public float minWanderHeight = 0.0f; // Minimum height above initial position
 
-    private Boid boid;
+    public Boid boid; // Reference to the Boid component
     private Vector3 initialPosition;
     private Vector3 wanderTarget;
 
     void Start()
     {
-        boid = GetComponent<Boid>();
+        boid = GetComponent<Boid>(); // Get the Boid component attached to this GameObject
         initialPosition = transform.position;
         wanderTarget = GetRandomPointInSphere();
     }
@@ -45,15 +45,5 @@ public class WanderBehavior : MonoBehaviour
         randomDirection += initialPosition;
         randomDirection.y = Mathf.Clamp(randomDirection.y, minWanderHeight, maxWanderHeight); // Clamp height within range
         return randomDirection;
-
-
-
-
-
     }
-
- 
-
-        
-
 }
