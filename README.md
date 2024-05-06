@@ -1,4 +1,4 @@
-# Bees
+# Garden
 
 Name: David Abaya
 
@@ -14,23 +14,52 @@ https://youtu.be/T49Gc0grQfU
 
 
 # Instructions
-
+You use WASD to move in the scene, mouse to look around
+U key to make it rain
+I key to make it sunny
 # How it works
 
 # List of classes/assets
 
 | Class/asset | Source |
 |-----------|-----------|
-| MyClass.cs | Self written |
-| MyClass1.cs | Modified from [reference]() |
-| MyClass2.cs | From [reference]() |
-
-Each team member or individual needs to write a paragraph or two explaining what they contributed to the project
+| Boid.cs | Self written |
+| BirdWingAnimator.cs | Self written |
+| FlightBehavior.cs | Self written |
+| GroundedBehavior.cs | Self written |
+| BirdBoid.cs | Self written |
+| link.cs | Self written |
+| GoToTreeBehavior.cs | Self written |
+| RainCollisionBehavior.cs | Self written |
+| RaindropSpawner.cs | Self written |
+| FreeRoamCameraController.cs | Self written |
+| SkyboxManager.cs | Self written |
+| Weather.cs | Self written |
+| WeatherController.cs | Self written |
+| BeeStateMachine.cs | Self written |
+| CreateBeeCreature.cs | Self written |
+| WingFlapAnimator.cs | Self written |
+| DisperseBehavior.cs | Self written |
+| FlowerSeekBehavior.cs | Self written |
+| WanderBehavior.cs | Self written |
+| Flower.cs | Self written |
+| FlowerSpawner.cs | Self written |
+| FormationController.cs | Self written |
+| Harmonic.cs | From skooter500 |
+| NoiseWander.cs | From skooter500 |
+| SpineAnimator.cs | From skooter500 |
 
 ## What I did
+
+In this project, I took on the task of developing the entire bird simulation and its associated behaviours and interactions independently. This included creating scripts like Boid.cs for bird movement, FlightBehavior.cs for flying actions, and RaindropSpawner.cs for rain effects. I also designed behaviours for bees (BeeStateMachine.cs) and flower spawning, as well as implementing features for flocking (FormationController.cs).
+
+To enhance the project, I integrated some existing code into the work. For instance, I utilized scripts like Harmonic.cs and NoiseWander.cs, developed by my professor skooter500, to add specific functionalities for the snake. Throughout the project, I worked independently to create a cohesive simulation environment, ensuring that all elements interacted realistically. The only asset that isn't mine is the skybox.
 ## What I'm most proud of
+
+What I'm most proud of in this project is the level of depth and complexity I achieved with the bee simulation and its behaviors. Building the entire system from scratch and seeing it come to life with realistic  flight dynamics, and interactions was incredibly rewarding.
 ## What I've learned
 
+Through this project, I've significantly enhanced my programming skills in C# within Unity and how to optimize my game. I've improved in object-oriented programming (OOP) by creating scripts for bird flight, bee behaviours, and environmental interactions like rain and flower seeking.
 # References
 
 This playlist contain what I used for bird flight and bees in the rain
