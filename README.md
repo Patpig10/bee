@@ -25,7 +25,7 @@ In this project, each animal is represented by a "boid" (a simulated creature) t
 To interact with the simulation, you can use keyboard inputs:
 
 Pressing U triggers rain, allowing you to observe how the animals react. Birds might flock together or seek shelter, while bees could alter their behavior to stay airborne or seek cover.
-Pressing I switches the weather to sunny, causing the animals to adjust their actions accordingly.
+Pressing I switches the weather to sunny, causing the animals to adjust their actions accordingly. Press R to reset.
 # List of classes/assets
 
 | Class/asset | Source |
