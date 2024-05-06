@@ -5,19 +5,18 @@ using UnityEngine;
 public class RainCollisionBehavior : MonoBehaviour
 {
     public float disableDuration = 6.0f; // Duration to disable flying upon rain collision
-    public float slerpSpeed = 2.0f; // Speed of interpolation
 
     private Boid boid;
-    private bool isFlyingEnabled = true;
     private Vector3 initialPosition;
+    public bool isFlyingEnabled = true;
 
-    void Start()
+    private void Start()
     {
         boid = GetComponent<Boid>();
         initialPosition = transform.position;
     }
 
-    void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("rain") && isFlyingEnabled)
         {
@@ -26,27 +25,26 @@ public class RainCollisionBehavior : MonoBehaviour
         }
     }
 
-    void DisableFlying()
+    private void DisableFlying()
     {
         if (isFlyingEnabled)
         {
-            // Zero out the y-component of velocity to disable flying
-            boid.velocity = new Vector3(boid.velocity.x, 0.0f, boid.velocity.z);
+            boid.velocity = new Vector3(boid.velocity.x, 0.0f, boid.velocity.z); // Zero out y-component of velocity
             isFlyingEnabled = false;
         }
     }
 
-    void EnableFlying()
+    private void EnableFlying()
     {
         isFlyingEnabled = true;
     }
 
-    void Update()
+    private void Update()
     {
-        // Smoothly transition y-position back to original height when flying is enabled
-        if (isFlyingEnabled)
+        if (!isFlyingEnabled)
         {
-            transform.position = Vector3.Slerp(transform.position, initialPosition, Time.deltaTime * slerpSpeed);
+            // Smoothly interpolate y-position back to initial position
+            transform.position = Vector3.Lerp(transform.position, initialPosition, Time.deltaTime);
         }
     }
 }
