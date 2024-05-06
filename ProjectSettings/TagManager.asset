@@ -10,6 +10,7 @@ TagManager:
   - tree
   - rain
   - BeeBody
+  - ground
   layers:
   - Default
   - TransparentFX
