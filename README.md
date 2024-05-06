@@ -6,6 +6,8 @@ Student Number: C21326401
 
 # Description
 
+In this project you'll be in a garden looking at various animals for example bees, birds and snake. Seeing how they work and react to the weather.
+
 ## Video:
 https://youtu.be/T49Gc0grQfU
 ## Screenshots
@@ -18,7 +20,12 @@ You use WASD to move in the scene, mouse to look around
 U key to make it rain
 I key to make it sunny
 # How it works
+In this project, each animal is represented by a "boid" (a simulated creature) that is governed by a set of behaviors attached to it. These behaviors dictate what the animal will do based on specific conditions being met. For example, a bird might exhibit flocking behavior or seek shelter when it rains, while a bee might search for flowers to collect nectar.
 
+To interact with the simulation, you can use keyboard inputs:
+
+Pressing U triggers rain, allowing you to observe how the animals react. Birds might flock together or seek shelter, while bees could alter their behavior to stay airborne or seek cover.
+Pressing I switches the weather to sunny, causing the animals to adjust their actions accordingly.
 # List of classes/assets
 
 | Class/asset | Source |
