@@ -2478,7 +2478,7 @@ MonoBehaviour:
   wanderRange: 135.6
   minAltitude: 41.49
   changeDirectionInterval: 3
-  landingKey: 32
+  landingKey: 8
 --- !u!114 &4713001898438434597
 MonoBehaviour:
   m_ObjectHideFlags: 0
