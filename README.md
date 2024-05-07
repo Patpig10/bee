@@ -58,7 +58,7 @@ Pressing I switches the weather to sunny, causing the animals to adjust their ac
 | Harmonic.cs | From skooter500 |
 | NoiseWander.cs | From skooter500 |
 | SpineAnimator.cs | From skooter500 |
-
+Music link: https://suno.com/song/39e0c224-5ed2-4fc0-ac91-93d2cdd8eb58
 ## What I did
 
 In this project, I took on the task of developing the entire bird simulation and its associated behaviours and interactions independently. This included creating scripts like Boid.cs for bird movement, FlightBehavior.cs for flying actions, and RaindropSpawner.cs for rain effects. I also designed behaviours for bees (BeeStateMachine.cs) and flower spawning, as well as implementing features for flocking (FormationController.cs).
