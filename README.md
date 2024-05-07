@@ -53,6 +53,8 @@ Pressing I switches the weather to sunny, causing the animals to adjust their ac
 | FlowerSpawner.cs | Self written |
 | FormationController.cs | Self written |
 | SceneReset.cs | Self written |
+| Skybox | Render Knight |
+| Music | Using Suno |
 | Harmonic.cs | From skooter500 |
 | NoiseWander.cs | From skooter500 |
 | SpineAnimator.cs | From skooter500 |
